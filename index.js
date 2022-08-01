@@ -9,7 +9,7 @@ const arr =[
 const router = express.Router();
 app.listen(process.env.PORT || 5000);
 
-router.get('/', (req, res)=> {
+router.get('/arr', (req, res)=> {
   res.send(arr);
 });
 
