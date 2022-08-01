@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+app.use(express.json())
 const arr =[
   {
     id:1,
@@ -9,7 +9,7 @@ const arr =[
 ]
 
 app.get("/",(req, res) =>{
-  res.send(JSON.stringify(arr));
+  res.send(arr);
 });
 
 app.listen(process.env.PORT || 5000);
