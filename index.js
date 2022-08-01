@@ -1,15 +1,15 @@
 const express = require("express");
 const app = express();
-app.use(express.json())
 const arr =[
   {
     id:1,
     name:'Working'
   }
 ]
+const router = express.Router();
+app.listen(process.env.PORT || 5000);
 
-app.get("/",(req, res) =>{
+router.get('/', (req, res)=> {
   res.send(arr);
 });
 
-app.listen(process.env.PORT || 5000);
