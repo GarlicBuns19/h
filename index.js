@@ -1,14 +1,13 @@
 const express = require("express");
 const app = express();
-const arr =[
-  {
-    id:1,
-    name:'Working'
-  }
-]
-app.listen(process.env.PORT || 5000);
+const data = require('./data.json')
+let port = process.env.PORT || 5000;
 
-app.get('/arr', (req, res)=> {
-  res.send(arr);
+app.listen(port, (req,res) => {
+  console.log(`Running port http://localhost:${port}`)
+});
+
+app.get('/', (req, res)=> {
+  res.send(data.cars['Ford'][0].name);
 });
 
