@@ -8,6 +8,6 @@ app.listen(port, (req,res) => {
 });
 
 app.get('/', (req, res)=> {
-  res.send(data.cars['Ford'][0].name);
+  res.send(data);
 });
 
